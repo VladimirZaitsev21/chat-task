@@ -1,5 +1,6 @@
 package ru.zvo.servicelayer;
 
+import org.springframework.stereotype.Service;
 import ru.zvo.datalayer.MessageDAO;
 import ru.zvo.datalayer.dto.Message;
 import ru.zvo.datalayer.dto.Status;
@@ -9,6 +10,7 @@ import ru.zvo.exception.MutedUserException;
 import ru.zvo.exception.OfflineUserException;
 import java.util.List;
 
+@Service
 public class SimpleMessageService implements MessageService {
 
     private MessageDAO messageDAO;

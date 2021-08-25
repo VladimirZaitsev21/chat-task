@@ -1,5 +1,6 @@
 package ru.zvo.commands;
 
+import org.springframework.stereotype.Component;
 import ru.zvo.datalayer.dto.User;
 import ru.zvo.exception.BannedUserException;
 import ru.zvo.exception.MutedUserException;
@@ -11,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+@Component
 public class MessageCommand implements Command {
 
     private MessageService messageService;

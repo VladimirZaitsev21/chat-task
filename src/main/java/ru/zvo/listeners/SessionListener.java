@@ -21,7 +21,7 @@ public class SessionListener implements HttpSessionListener {
         HttpSession httpSession = httpSessionEvent.getSession();
         User user = (User) httpSession.getAttribute("user");
         if (user != null) {
-            UserService userService = (UserService) contextProvider.getApplicationContext().getBean("userService");
+            UserService userService = (UserService) contextProvider.getApplicationContext().getBean(UserService.class);
             userService.logout(user.getId());
         }
     }

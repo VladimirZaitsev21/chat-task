@@ -25,7 +25,7 @@ public class BannedUserFilter implements Filter {
         String command = request.getParameter("command");
         if ("loginCommand".equals(command)) {
             String nick = request.getParameter("nick");
-            UserService userService = (UserService) contextProvider.getApplicationContext().getBean("userService");
+            UserService userService = (UserService) contextProvider.getApplicationContext().getBean(UserService.class);
             User user = userService.getUserByNick(nick);
             if (user != null && user.getStatus() == Status.BANNED) {
                 response.sendRedirect(request.getContextPath() + "/login");

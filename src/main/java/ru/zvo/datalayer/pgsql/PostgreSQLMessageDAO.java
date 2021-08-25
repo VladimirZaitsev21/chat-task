@@ -1,6 +1,7 @@
 package ru.zvo.datalayer.pgsql;
 
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 import ru.zvo.datalayer.MessageDAO;
 import ru.zvo.datalayer.dto.Message;
 import ru.zvo.datalayer.mappers.MessageMapper;
@@ -8,6 +9,7 @@ import ru.zvo.utils.QueryProvider;
 
 import java.util.List;
 
+@Repository
 public class PostgreSQLMessageDAO implements MessageDAO {
 
     private JdbcTemplate jdbcTemplate;

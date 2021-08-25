@@ -1,5 +1,6 @@
 package ru.zvo.commands;
 
+import org.springframework.stereotype.Component;
 import ru.zvo.datalayer.UserDAO;
 import ru.zvo.datalayer.dto.Status;
 import ru.zvo.datalayer.dto.User;
@@ -10,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+@Component
 public class LogoutCommand implements Command {
 
     private UserService userService;

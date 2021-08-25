@@ -1,5 +1,7 @@
 package ru.zvo.datalayer.dto;
 
+import org.springframework.stereotype.Component;
+
 import java.util.Date;
 
 public class Message {

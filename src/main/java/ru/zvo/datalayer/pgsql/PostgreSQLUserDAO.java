@@ -1,7 +1,9 @@
 package ru.zvo.datalayer.pgsql;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 import ru.zvo.datalayer.UserDAO;
 import ru.zvo.datalayer.dto.User;
 import ru.zvo.datalayer.mappers.UserMapper;
@@ -9,6 +11,7 @@ import ru.zvo.utils.QueryProvider;
 
 import java.util.List;
 
+@Repository
 public class PostgreSQLUserDAO implements UserDAO {
 
     private JdbcTemplate jdbcTemplate;

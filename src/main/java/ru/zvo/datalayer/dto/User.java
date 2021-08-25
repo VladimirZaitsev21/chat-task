@@ -1,5 +1,7 @@
 package ru.zvo.datalayer.dto;
 
+import org.springframework.stereotype.Component;
+
 public class User {
 
     private long id;

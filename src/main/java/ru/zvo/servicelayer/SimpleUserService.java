@@ -1,5 +1,6 @@
 package ru.zvo.servicelayer;
 
+import org.springframework.stereotype.Service;
 import ru.zvo.datalayer.UserDAO;
 import ru.zvo.datalayer.dto.Role;
 import ru.zvo.datalayer.dto.Status;
@@ -11,6 +12,7 @@ import ru.zvo.exception.OfflineUserException;
 
 import java.util.List;
 
+@Service
 public class SimpleUserService implements UserService {
 
     private UserDAO userDAO;

@@ -1,5 +1,6 @@
 package ru.zvo.commands;
 
+import org.springframework.stereotype.Component;
 import ru.zvo.exception.BannedUserException;
 import ru.zvo.servicelayer.UserService;
 
@@ -9,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
+@Component
 public class LoginCommand implements Command {
 
     private UserService userService;
